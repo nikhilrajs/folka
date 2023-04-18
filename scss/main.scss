@@ -3,7 +3,7 @@
 
 /* vendors */
 
-@import "vendor/bootstrap/bootstrap"; 
+@import "vendor/bootstrap/bootstrap";
 @import "vendor/light-slider/lightslider.min";
 @import "vendor/mCustom-scrolllbar/jquery.mCustomScrollbar.min";
 @import "vendor/fancybox/fancybox";
@@ -14,7 +14,7 @@
 @import "website/core/icons";
 
 /* Import variables*/
-@import "website/variables/variables"; 
+@import "website/variables/variables";
 
 /* Mixins */
 @import "website/mixins/position";
@@ -39,9 +39,9 @@
 @import "website/mixins/hover";
 @import "website/mixins/placeholder-color";
 @import "website/mixins/background-size";
-@import "website/mixins/gradient";    
-@import "website/mixins/box-size";    
-@import "website/mixins/media-query";    
+@import "website/mixins/gradient";
+@import "website/mixins/box-size";
+@import "website/mixins/media-query";
 
 
 /*  Default settings */
@@ -66,9 +66,11 @@
 @import "website/screen-components/blog";
 @import "website/screen-components/team";
 @import "website/screen-components/category";
+@import "website/screen-components/our-partners";
+@import "website/screen-components/partner-with-us";
 
  /* Utilities */
- @import "website/utilities/utilities"; 
+ @import "website/utilities/utilities";
 
 
 

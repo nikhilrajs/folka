@@ -1,19 +1,19 @@
-<?php 
+<?php
      $total = wp_count_posts()->publish;
-     
+
      if (  $total >= 1 ) : ?>
     <section class="app-l-recent-stories app-l-bg--dark">
         <div class="container">
-            <h2 class="h1">recent stories</h2>
+            <h2 class="h1">featured blogs</h2>
             <div class="app-l-recent__slider-wrap">
                 <div class="app-l-r__slider-over">
-                    <?php 
+                    <?php
                         $args = array(
                             'post_type'=> 'post',
                             'orderby'    => 'post_date',
                             'post_status' => 'publish',
                             'order'    => 'DESC',
-                            'posts_per_page' => 8 // this will retrive all the post that is published 
+                            'posts_per_page' => 8 // this will retrive all the post that is published
                         );
                         $result = new WP_Query( $args );
                         if ( $result-> have_posts() ) : ?>
@@ -27,15 +27,15 @@
                                                 $thumb_url = wp_get_attachment_image_src($thumb_id,'post', true);
                                             ?>
                                                 <img data-src="<?php echo $thumb_url[0]; ?>" alt="<?php the_title(); ?>" class="img-fluid" />
-                                            
+
                                             <?php } else { ?>
                                                 <img src="<?php bloginfo('template_directory'); ?>/img/default-image.png" alt="<?php the_title(); ?>" class="img-fluid" />
-                                            <?php } ?> 
+                                            <?php } ?>
                                         </a>
                                     </div>
                                     <div class="app-l-recent__content">
-                                        
-                                            <?php 
+
+                                            <?php
                                                 $tags = get_tags(array(
                                                     'hide_empty' => false
                                                 ));
@@ -48,7 +48,7 @@
                                                     <?php } ?>
                                                 </div>
                                             <?php } ?>
-                                        
+
                                         <h6>
                                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                         </h6>
@@ -90,7 +90,7 @@
                 </div>
             </div>
             <?php if ( !is_page_template( 'project-single-page.php' )) : ?>
-                <?php 
+                <?php
                     if (  $total > 3 ) : ?>
                         <div class="app-l-recent__more text-center">
                             <a href="blog-list" class="app-c-btn app-c-btn--secondary">See more blogs</a>

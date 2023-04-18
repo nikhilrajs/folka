@@ -194,5 +194,5 @@
 <?php get_template_part( 'recent-stories', get_post_format() ); ?>
 <?php get_template_part( 'our-partners', get_post_format() ); ?>
 <?php get_template_part( 'partner-with-us', get_post_format() ); ?>
-<?php get_template_part( 'partner-with-us-inside', get_post_format() ); ?>
+<!-- <?php get_template_part( 'partner-with-us-inside', get_post_format() ); ?> -->
 <?php get_footer(); ?>

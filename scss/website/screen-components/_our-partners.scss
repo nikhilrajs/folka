@@ -1,0 +1,36 @@
+.app-l-our-partners__wrapper {
+	background-color: #F1F3F5;
+	padding-block: 115px;
+}
+
+.app-l-our-partners__title {
+	margin-block-end: 42px;
+	font-size: 38px;
+	color: #212529;
+	text-align: center;
+}
+
+.app-l-our-partners {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 50px;
+
+	@include media-breakpoint-up(md) {
+			max-width: 70%;
+			margin-inline: auto;
+		}
+
+
+}
+
+.app-l-our-partners__image {
+	// min-width: 200px;
+	width: auto;
+	max-width: 300px;
+	max-height: 120px;
+	height: auto;
+	object-fit: contain;
+	mix-blend-mode: multiply;
+}

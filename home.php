@@ -101,8 +101,8 @@
     </div>
 </section> -->
 <section class="app-l-how-we-are app-l-bg--dark">
-    <div class="container app-l-how-we-are_container">
-        <h3 class="h1">how we are <span>doing it</span></h3>
+    <div class="container app-l-how-we-are__container">
+        <h3 class="fs-4 lh-base mb-4">Sustainability is not a fancy words for us. This is how we rethinking tourism</h3>
         <div class="app-l-hw__row">
             <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
@@ -125,17 +125,21 @@
                 </div>
             <?php endwhile; wp_reset_query(); ?>
         </div>
-				<section>
+				<div class="app-l-hw__divider"></div>
+				<section class="row">
+					<div class="col-lg-8">
 					<?php if(get_field('home_community_info_title')) { ?>
-						<h2><?php echo get_field('home_community_info_title') ?></h2>
+						<h2 class="fw-light fs-4 lh-base text-center text-md-start"><?php echo get_field('home_community_info_title') ?></h2>
 					<?php } ?>
 					<?php if(get_field('home_community_info_description')) { ?>
 						<?php echo get_field('home_community_info_description') ?>
 					<?php } ?>
-
-						<a href="javascript:void(0);" class="app-c-btn app-c-btn--primary" data-fancybox="dialog"  data-src="#home_community_info_dialog">
-								<span>Join Community</span>
-						</a>
+				</div>
+						<div class="col-lg-4 d-flex align-items-sm-end justify-content-center justify-content-md-start justify-content-lg-end mb-3">
+							<a href="javascript:void(0);" class="app-c-btn app-c-btn--teritary" data-fancybox="dialog"  data-src="#home_community_info_dialog">
+									<span>Join Folka Community</span>
+							</a>
+						</div>
 					</section>
     </div>
 </section>

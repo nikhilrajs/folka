@@ -110,32 +110,37 @@
 }
 
 .app-l-how-we-are{
-    padding: 55px 0;
+    padding: 150px 0;
+		color: #212529;
 
-    .h1{
-        color: $white;
-        text-align: center;
+    // .h1{
+    //     color: $white;
+    //     text-align: center;
 
-        span{
-            color: $primary-color;
-        }
-    }
+    //     span{
+    //         color: $primary-color;
+    //     }
+    // }
 
 		.app-l-how-we-are__container {
 			background-color: #FFCE6E;
-			border-radius: 30px
+			border-radius: 30px;
+			padding-inline: 58px;
+			padding-block: 54px;
 		}
 }
 
 .app-l-hw__row{
     @include flexboxv2();
     @include flex-wrapv2(wrap);
+		@include justify-contentv2(center);
+		gap: 1rem;
 
     .app-l-hw__block{
-        width: 33.33333%;
-        margin: 55px 0;
+        width: 32.33333%;
+        margin: 30px 0;
         min-height: 179px;
-        border-bottom: $grey-shade-100 1px solid;
+        // border-bottom: $grey-shade-100 1px solid;
 
         @include flexboxv2();
         @include flex-directionv2(column);
@@ -152,17 +157,17 @@
         @include media-400{
             width: 100%;
         }
-        &:after{
-            content: '';
-            width: 100%;
-            max-width: 100px;
-            height: 2px;
-            background: $primary-color;
-            display: block;
-            margin-top: auto;
-        }
+        // &:after{
+        //     content: '';
+        //     width: 100%;
+        //     max-width: 100px;
+        //     height: 2px;
+        //     background: $primary-color;
+        //     display: block;
+        //     margin-top: auto;
+        // }
         .app-l-hw__icon{
-            height: 90px;
+            // height: 90px;
             margin-bottom: 10px;
 
             @include flexboxv2();
@@ -174,10 +179,8 @@
 
             .app-l-hw__label{
                 display: block;
-                color: $white;
-                font-weight: 600;
-                font-family: $font-secondary;
-                font-size: 22px;
+                // font-family: $font-secondary;
+                font-size: 18px;
                 line-height: normal;
                 text-align: center;
 
@@ -192,4 +195,11 @@
             }
         }
     }
+	}
+
+.app-l-hw__divider {
+	width: 100%;
+	height: 1px;
+	margin-block: 50px;
+	border-top: dotted 1px hsl(0 0% 0% / 20%);
 }

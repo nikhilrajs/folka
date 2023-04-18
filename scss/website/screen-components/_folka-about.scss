@@ -1,0 +1,195 @@
+.app-l-folka__about{
+    padding: 100px 0;
+    text-align: center;
+
+    @include media-767{
+        padding: 60px 0;
+    }
+
+    h2{
+        color: $white;
+        margin-bottom: 41px;
+    }
+    p{
+        color: $white;
+        max-width: 734px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .app-c-btn{
+        margin-top: 74px;
+    }
+}
+
+
+
+.app-l-folka__mv-block{
+    min-height: 100vh;
+    position: relative;
+    padding: 210px 0;
+
+    @include flexboxv2();
+    @include flex-directionv2(column);
+    @include justify-contentv2(center);
+
+    + .app-l-folka__mv-block{
+        margin-top: 20px;
+    }
+    .app-l-folka__mv-row{
+        @include flexboxv2();
+        @include align-itemsv2(center);
+
+        @include media-991{
+            @include flex-directionv2(column);
+            @include align-itemsv2(flex-start);
+        }
+    }
+
+    .app-l-folka__mv-left{
+        width: 150px;
+        margin-right: 84px;
+
+        @include flex-shrinkv2(0);
+        @include flexboxv2();
+        @include align-itemsv2(center);
+
+        @include media-991{
+            margin-bottom: 25px;
+        }
+
+        img{
+            margin-right: 8px;
+        }
+        .app-l-folka__ltext{
+            font-family: $font-secondary;
+            color: $white;
+            font-size: 30px;
+            font-weight: 300;
+        }
+    }
+
+    .app-l-folka__mv-right{
+        width: 100%;
+        min-width: 0;
+
+        .app-l-folka__rtext{
+            display: block;
+            color: $white;
+            font-size: 86px;
+            line-height: 94px;
+            font-weight: 300;
+            font-family: $font-secondary;
+
+            @include media-1200{
+                font-size: 76px;
+                line-height: 84px;
+            }
+
+            @include media-991{
+                font-size: 60px;
+                line-height:66px;
+            }
+            @include media-400{
+                font-size: 40px;
+                line-height:46px;
+            }
+        }
+    }
+    .app-l-folka__arrow{
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-width: 80px;
+
+        @include media-991{
+            max-width: 60px;
+        }
+    }
+}
+
+.app-l-how-we-are{
+    padding: 55px 0;
+
+    .h1{
+        color: $white;
+        text-align: center;
+
+        span{
+            color: $primary-color;
+        }
+    }
+
+		.app-l-how-we-are__container {
+			background-color: #FFCE6E;
+			border-radius: 30px
+		}
+}
+
+.app-l-hw__row{
+    @include flexboxv2();
+    @include flex-wrapv2(wrap);
+
+    .app-l-hw__block{
+        width: 33.33333%;
+        margin: 55px 0;
+        min-height: 179px;
+        border-bottom: $grey-shade-100 1px solid;
+
+        @include flexboxv2();
+        @include flex-directionv2(column);
+        @include align-itemsv2(center);
+
+        @include media-991{
+            width: 50%;
+        }
+        @include media-767{
+            min-height: 160px;
+            margin-top:30px;
+            margin-bottom: 30px;
+        }
+        @include media-400{
+            width: 100%;
+        }
+        &:after{
+            content: '';
+            width: 100%;
+            max-width: 100px;
+            height: 2px;
+            background: $primary-color;
+            display: block;
+            margin-top: auto;
+        }
+        .app-l-hw__icon{
+            height: 90px;
+            margin-bottom: 10px;
+
+            @include flexboxv2();
+            @include justify-contentv2(center);
+            @include align-itemsv2(center);
+        }
+        .app-l-hw__text{
+            max-width: 300px;
+
+            .app-l-hw__label{
+                display: block;
+                color: $white;
+                font-weight: 600;
+                font-family: $font-secondary;
+                font-size: 22px;
+                line-height: normal;
+                text-align: center;
+
+                @include media-767{
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                @include media-400{
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

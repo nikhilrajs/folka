@@ -1,0 +1,9 @@
+// usage: @include transition(opacity ease 0.2s, transform ease 0.2s);
+
+@mixin transition($transition...) {
+  transition:$transition;
+  -webkit-transition:$transition;
+  -moz-transition:$transition;
+  -ms-transition:$transition;
+  -o-transition:$transition;
+}

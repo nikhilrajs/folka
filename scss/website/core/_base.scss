@@ -1,0 +1,175 @@
+
+
+::selection {
+	background: rgba($primary-color, 0.25);
+	color: $white;
+}
+::-moz-selection {
+	background: rgba($primary-color, 0.25);
+	color: $white;
+}
+a:focus, input:focus, textarea:focus, button:focus
+{
+	outline:none;
+	text-decoration:none;
+}
+h1, h2, h3, h4, h5, h6 
+{	
+	font-family: $font-secondary;
+	font-weight: 700;
+}
+h1, .h1{
+	font-size: 50px;
+	line-height: 60px;
+	margin-bottom: 40px;
+
+	@include media-991{
+		font-size: 37px;
+		line-height: 44px;
+	}
+	@include media-767{
+		font-size: 29px;
+		line-height: 1.2;
+	}
+}
+h2, .h2
+{
+	font-size: 36px;
+	line-height: 44px;
+	font-weight: 600;
+
+	@include media-991{
+		font-size: 28px;
+		line-height: 1.2;
+	}
+	@include media-767{
+		font-size: 23px;
+		line-height: 1.2;
+	}
+}
+h3, .h3
+{
+	font-size: 29px;
+	font-weight: 600;
+	line-height: 1.2;
+
+	@include media-991{
+		font-size: 24px;
+	}
+	@include media-767{
+		font-size: 21px;
+	}
+}
+h4, .h4{
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.2;
+
+	@include media-991{
+		font-size: 21px;
+	}
+	@include media-767{
+		font-size: 19px;
+	}
+}
+h5, .h5{
+	font-size: 21px;
+	font-weight: 600;
+	line-height: 1.2;
+
+	@include media-991{
+		font-size: 19px;
+	}
+	@include media-767{
+		font-size: 18px;
+	}
+}
+h6, .h6{
+	font-size: 19px;
+	font-weight: 600;
+	line-height: 1.2;
+
+	@include media-991{
+		font-size: 18px;
+	}
+	@include media-767{
+		font-size: 17px;
+	}
+}
+a
+{
+	color:$primary_color;
+	text-decoration:none;
+	
+	@include transition(color ease 0.2s);
+
+	&:hover{
+		text-decoration:none;
+		color:lighten($primary_color, 10%);
+	}
+}
+button, a{
+	&:focus-visible{
+		outline: $primary-color 2px dashed;
+		outline-offset: 4px;
+		text-decoration: none;
+	}
+}
+label
+{
+	font-weight:normal;
+}
+p{
+	margin:0 0 15px 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li{
+		margin-bottom:0px;
+		list-style:none;
+		position:relative;
+	}
+}
+ol
+{
+	padding:0px;
+	list-style-position:inside;
+}
+img{
+	opacity: 1;
+
+	@include transition(opacity ease 0.2s);
+
+	&[data-src]{
+		opacity: 0;
+    	filter: alpha(opacity=0);
+	}
+}
+.app-l-svg--responsive{
+	width:100%;
+	max-width: 100%;
+	height: auto;
+}
+.app-l-bg--dark{
+	background: $app-bg-secondary;
+}
+/*
+ * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
+ *
+ * [1] IE9
+ * [2] IE10+
+ */
+/* 1 */
+.ie9 img[src$=".svg"] {
+  width: 100%; 
+}
+/* 2 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src$=".svg"] {
+    width: 100%;  
+  }
+}
+

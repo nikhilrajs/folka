@@ -1,0 +1,89 @@
+
+
+/* font */
+	$font-primary : 'Mulish', sans-serif !default;
+	$body-font:  $font-primary !default;
+	$font-secondary: 'Poppins', sans-serif;
+	$font-teritary : 'DM Sans', sans-serif;
+	$font-awesome:	'Font Awesome 5 Free';
+	$font-icons: 'Folka';	
+
+
+/* Font System */
+	$text-lg:         14px;
+	$default-font-size : 16px;
+
+/* Color System */
+
+	$primary-color		:			#3CA06C;
+	$primary-tint-20 		: 		lighten(desaturate($primary-color, 9.45), 5.88);
+	$primary-tint-40 		: 		lighten(desaturate($primary-color, 10.48), 17.06);
+	$primary-tint-60 		: 		lighten(desaturate(adjust-hue($primary-color, 1), 11.66), 28.43);
+	$primary-tint-80 		: 		lighten(desaturate(adjust-hue($primary-color, -1), 10.57), 40.00);
+	$primary-tint-100 		: 		lighten(desaturate(adjust-hue($primary-color, -2), 7.52), 51.18);
+
+	$primary-tone-20		: 		lighten(desaturate($primary-color, 7.32), 3.14);
+	$primary-tone-40		: 		lighten(desaturate($primary-color, 16.53), 9.41);
+	$primary-tone-60		: 		lighten(desaturate($primary-color, 21.42), 16.08);
+	$primary-tone-80		: 		lighten(desaturate(adjust-hue($primary-color, -1), 28.41), 22.35);
+	$primary-tone-100		: 		lighten(desaturate(adjust-hue($primary-color, 1), 38.51), 28.63);
+
+	$primary-shade-20		: 		darken($primary-color, 4.31);
+	$primary-shade-40		: 		darken($primary-color, 12.94);
+	$primary-shade-60		: 		darken($primary-color, 21.57);
+	$primary-shade-80		: 		darken(adjust-hue($primary-color, -1), 30.20);
+	$primary-shade-100		: 		darken(adjust-hue($primary-color, 1), 38.82);
+
+	$grey					: 		#191919;
+	$grey-tint-20			:		$grey;
+	$grey-tint-40			:		lighten(saturate(adjust-hue($grey, 60), 1.99), 19.80);
+	$grey-tint-60			:		lighten(saturate(adjust-hue($grey, 60), 1.59), 39.61);
+	$grey-tint-80			:		lighten(saturate(adjust-hue($grey, 60), 3.80), 59.22);
+	$grey-tint-100			:		lighten(saturate(adjust-hue($grey, 60), 11.86), 78.63);
+
+	$grey-tone-20			:		lighten(saturate(adjust-hue($grey, 60), 40.00), 86.27);
+	$grey-tone-40			:		lighten(saturate(adjust-hue($grey, 60), 13.64), 81.57);
+	$grey-tone-60			:		lighten(saturate(adjust-hue($grey, 60), 5.88), 76.86);
+	$grey-tone-80			:		lighten(saturate(adjust-hue($grey, 60), 2.17), 72.16);
+	$grey-tone-100			:		lighten($grey, 67.45);
+
+	$grey-shade-20			:		lighten($grey, 72.55);
+	$grey-shade-40			:		lighten($grey, 54.90);
+	$grey-shade-60			:		lighten(saturate(adjust-hue($grey, 240), 0.83), 37.25);
+	$grey-shade-80			:		lighten(saturate(adjust-hue($grey, 240), 1.33), 19.61);
+	$grey-shade-100			:		lighten(saturate(adjust-hue($grey, 240), 3.33), 1.96);
+
+
+	$secondary-color:		#F5811E;
+	$black: 				#000000;
+	$white:					#ffffff;
+	$default_text_color :   #606060;
+	$dark-text-color : 	    #323232;
+	$app-body-bg : 		    #ffffff;
+	$app-bg-secondary: 		#000000;
+	$text-dark:				#252525;
+	$border :			    #d3d3d3;
+	$green:					#44A94C;
+	$red:					#E83230;
+	$yellow : 				#FF912C;
+
+	// Success
+
+	$success		:	#42BE65;
+	$success-light	:	#8ED8A3;
+	$success-dark	:	#8ED8A3;
+
+	// Warning
+
+	$warning		:	#FFAB2E;
+	$warning-light	:	#FFCD82;
+	$warning-dark	:	#99671C;
+
+	// Danger
+
+	$danger			:	#FF3B45;
+	$danger-light	:	#FF898F;
+	$danger-dark	:	#992329;
+
+
+

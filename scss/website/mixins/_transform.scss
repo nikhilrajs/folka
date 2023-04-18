@@ -1,0 +1,26 @@
+// http://bourbon.io/docs/#transform
+// Usage
+// @include transform(translateY(50px));
+// @include transform(scale(0.9) rotate(-3deg));
+// @include transform-origin(center top);
+// @include transform-style(preserve-3d);
+
+@mixin transform-style($style: flat) {
+  @include prefixer(transform-style, $style, webkit moz ms o spec);
+}
+
+@mixin transform($transform...){
+    transform: $transform;
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+}
+
+@mixin transformOrigin($transformaOrigin...){
+  transform-origin: $transformaOrigin;
+  -webkit-transform-origin: $transformaOrigin;
+  -moz-transform-origin: $transformaOrigin;
+  -ms-transform-origin: $transformaOrigin;
+  -o-transform-origin: $transformaOrigin;
+}

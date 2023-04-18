@@ -1,0 +1,117 @@
+
+@font-face {
+  font-family: 'Folka';
+  src:  url('../fonts/icons/Folka.eot?oppqwe');
+  src:  url('../fonts/icons/Folka.eot?oppqwe#iefix') format('embedded-opentype'),
+    url('../fonts/icons/Folka.ttf?oppqwe') format('truetype'),
+    url('../fonts/icons/Folka.woff?oppqwe') format('woff'),
+    url('../fonts/icons/Folka.svg?oppqwe#Folka') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="folka-"], [class*=" folka-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Folka' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.folka-car:before {
+  content: "\e91a";
+}
+.folka-bus:before {
+  content: "\e91b";
+}
+.folka-train:before {
+  content: "\e91c";
+}
+.folka-flight:before {
+  content: "\e91d";
+}
+.folka-file:before {
+  content: "\e917";
+}
+.folka-date:before {
+  content: "\e918";
+}
+.folka-location:before {
+  content: "\e919";
+}
+.folka-night:before {
+  content: "\e914";
+}
+.folka-day:before {
+  content: "\e915";
+}
+.folka-rupee:before {
+  content: "\e916";
+}
+.folka-menu:before {
+  content: "\e913";
+}
+.folka-bookmark:before {
+  content: "\e911";
+}
+.folka-copy:before {
+  content: "\e912";
+}
+.folka-search:before {
+  content: "\e910";
+}
+.folka-close:before {
+  content: "\e90b";
+}
+.folka-linkedin:before {
+  content: "\e90c";
+}
+.folka-insta:before {
+  content: "\e90d";
+}
+.folka-facebook:before {
+  content: "\e90e";
+}
+.folka-twitter:before {
+  content: "\e90f";
+}
+.folka-phone:before {
+  content: "\e909";
+}
+.folka-mail:before {
+  content: "\e90a";
+}
+.folka-Hamburger:before {
+  content: "\e900";
+}
+.folka-arrow-right:before {
+  content: "\e901";
+}
+.folka-arrow-left:before {
+  content: "\e902";
+}
+.folka-arrow-down:before {
+  content: "\e903";
+}
+.folka-arrow-up:before {
+  content: "\e904";
+}
+.folka-angle-right:before {
+  content: "\e905";
+}
+.folka-angle-left:before {
+  content: "\e906";
+}
+.folka-angle-down:before {
+  content: "\e907";
+}
+.folka-angle-up:before {
+  content: "\e908";
+}

@@ -1,0 +1,274 @@
+.form-control {
+    color: $grey-shade-40;
+    font-weight: 400;
+    font-size: 18px;
+    border: 1px solid transparent;
+    padding: 14px 18px;
+    height: 52px;
+    outline: none;
+    background: $grey-shade-100;
+
+    @include border-radius(16px);
+    @include boxShadow(none);
+    @include transition(border ease 0.2s, background ease 0.2s, color ease 0.2s);
+
+    &::-webkit-input-placeholder { /* Edge */
+        color: $grey-shade-40;
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $grey-shade-40;
+    }
+
+    &::placeholder {
+        color: $grey-shade-40;
+    }
+
+    &:focus {
+        background: $grey-shade-100;
+        border-color: transparent;
+        color: $grey-shade-40;
+
+        @include boxShadow(none);
+    }
+
+    &.form-control--secondary{
+        padding: 11px 15px;
+        height: 40px;
+
+        @include noShadow();
+    }
+}
+
+.form-group{
+    .app-l-form--label{
+        color: #767676;
+        font-size: 13px;
+        font-weight: 400;
+        display: block;
+        line-height: normal;
+        margin: 0 0 3px;
+    }
+}
+.form-group--float{
+    position: relative;
+    margin-bottom: 25px;
+    .form-control--invert, .wpcf7-form-control{
+        color: $grey-shade-100;
+        font-weight: 400;
+        font-size: 15px;
+        border: 1px solid $grey-shade-20;
+        padding: 14px 18px;
+        height: 48px;
+        outline: none;
+        background: $white;
+        display: block;
+        width: 100%;
+    
+        @include border-radius(10px);
+        @include boxShadow(none);
+        @include transition(border ease 0.2s, background ease 0.2s, color ease 0.2s);
+    
+        &::-webkit-input-placeholder { /* Edge */
+            color: $grey-shade-100;
+            opacity: 1;
+        }
+    
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: $grey-shade-100;
+            opacity: 1;
+        }
+    
+        &::placeholder {
+            color: $grey-shade-100;
+            opacity: 1;
+        }
+    
+        &:focus {
+            background: $white;
+            border-color: transparent;
+            color: $grey-shade-100;
+            border-color: $grey-shade-60;
+            outline: none !important;
+    
+            @include boxShadow(none);
+        }
+    }
+    .app-l-form--label{
+        font-size: 14px;
+        color: $grey-shade-80;
+        position: absolute;
+        top:15px;
+        left: 9px;
+        background: $white;
+        pointer-events: none;
+        padding: 0 5px;
+
+        @include transition(background ease 0.2s, transform ease 0.2s);
+    }
+    .form-control--invert, .wpcf7-form-control{
+        &:placeholder-shown{
+            + .app-l-form--label{
+                @include transform(translate(0px, 0px));
+            }
+        }
+       
+
+        &:not(:placeholder-shown){
+            + .app-l-form--label{
+                @include transform(translate(0px, -25px));
+            }
+        }
+        &:focus{
+            + .app-l-form--label{
+                @include transform(translate(0px, -25px));
+            }
+            &:not(:placeholder-shown){
+                + .app-l-form--label{
+                    @include transform(translate(0px, -25px));
+                }
+            } 
+        }
+    }
+    textarea{
+        height: 100px !important;
+        resize:none;
+    }
+    .select2-container{
+        height: 48px;
+        width: 100% !important;
+        display: block;
+
+        .selection{
+            display: block;
+            height: 100%;
+
+            .select2-selection{
+                height: 100%;
+                border-color: $grey-shade-20;
+
+                @include border-radius(10px);
+                @include flexboxv2();
+                @include align-itemsv2(center);
+
+                .select2-selection__rendered{
+                    width: 100%;
+                }
+
+                .select2-selection__arrow{
+                    
+
+                    @include flexboxv2();
+                    @include align-itemsv2(center);
+                    @include justify-contentv2(center);
+
+                    b{
+                        position: static;
+                    }
+                }
+            }
+        }
+    }
+    label{
+        .wpcf7-form-control-wrap{
+            pointer-events: none !important;
+        }
+    }
+}
+.app-c-select{
+    .select2 {
+        display: block;
+
+        &:focus{
+            outline: none;
+        }
+        .selection{
+            .select2-selection{
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                padding: 7px 14px;
+                height: 44px;
+                outline: none;
+
+                @include border-radius(0);
+                @include boxShadow(inset 0px 4px 10px rgba(0, 0, 0, 0.05));
+                @include transition(border ease 0.2s);
+                @include flexboxv2();
+                @include align-itemsv2(center);
+                
+                .select2-selection__rendered{
+                    line-height: normal;
+                    padding-left: 0;
+                    color: #767676;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+                .select2-selection__arrow{
+                    width: 35px;
+                    height: 100%;
+
+                    @include flexboxv2();
+                    @include align-itemsv2(center);
+                    @include justify-contentv2(center);
+
+                    &:before{
+                        content: "\e904";
+                        font-family: $font-icons;
+                        font-size: 13px;
+                        color: rgba(0, 0, 0, 0.5);
+                        display: block;
+
+                        @include transition(transform ease 0.2s);
+                    }
+                    b{
+                        display: none;
+                    }
+                }
+            }
+        }
+        &.select2-container--focus{
+            .selection{
+                .select2-selection{
+                    border-color: $secondary-color;
+                }
+            }
+        }
+        &.select2-container--open{
+            .selection{
+                .select2-selection{
+                    .select2-selection__arrow{
+                        &:before{
+                            @include transform(rotate(180deg));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.select2-container{
+    .select2-dropdown{
+        border-color: rgba(0, 0, 0, 0.1);
+
+        .select2-results{
+            .select2-results__options{
+                .select2-results__option{
+                    padding: 12px 15px;
+                    color: #767676;
+                    font-size: 14px;
+                    
+                    @include transition(background ease 0.2s);
+                    
+                    &.select2-results__option--highlighted{
+                        background: lighten($secondary-color, 40%);
+                        color: #767676;
+                    }
+                    &.select2-results__option--selected{
+                        background: $secondary-color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

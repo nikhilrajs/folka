@@ -1,0 +1,17 @@
+.app-l-toast--primary{
+    background: $primary-color;
+}
+
+// contact form 7 alert
+
+.wpcf7{
+    form{
+        .wpcf7-response-output{
+            border-width: 1px;
+            padding: 14px 18px;
+            line-height: normal;
+
+            @include border-radius(5px);  
+        }
+    }
+} 

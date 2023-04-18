@@ -1,0 +1,175 @@
+.app-l-team__banner{
+    overflow: hidden;
+    margin-bottom: 68px;
+
+    @include border-radius(20px);
+}
+.app-l-team__info{
+    text-align: center;
+    max-width: 870px;
+    margin: 30px auto 120px;
+    color: $grey-tone-40;
+
+    .h1{
+        text-align: center;
+    }
+    p{
+        color: $grey-tone-40;
+        margin: 0;
+
+        + p{
+            margin-top: 55px;
+        }
+    }
+}
+.app-l-meet{
+    .h1{
+        text-align: center;
+        margin-bottom: 78px;
+    }
+}
+
+.app-l-meet__row{
+    margin: -15px;
+    margin-right: -15px;
+
+    @include flexboxv2();
+    @include flex-wrapv2(wrap);
+
+    .app-l-meet__block{
+        width: 25%;
+        padding: 0 15px;
+        margin: 0 0 77px;
+
+        @include media-1200{
+            width: 33.33333%;
+        }
+
+        @include media-991{
+            width: 50%;
+        }
+
+        @include media-576{
+            width: 100%;
+        }
+
+        .app-l-meet__avatar{
+            overflow: hidden;
+            width: 164px;
+            height: 164px;
+            margin: 0 auto;
+            background: #0D0D0D;
+
+            @include border-radius(65px);
+            @include flexboxv2();
+            @include align-itemsv2(center);
+            @include justify-contentv2(center);
+            @include transition(background ease 0.2s);
+        }
+        .app-l-meet__content{
+            margin-top: 30px;
+            text-align: center;
+
+            h5{
+                margin-bottom: 0;
+            }
+            .app-l-deg{
+                display: block;
+                color: $grey-shade-40;
+                margin-top: 5px;
+                line-height: normal;
+            }
+            .app-l-meet__connect{
+                margin-top: 17px;
+
+                @include flexboxv2();
+                @include align-itemsv2(center);
+                @include justify-contentv2(center);
+
+                a{
+                    color: $grey-shade-40;
+                    font-size: 23px;
+
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        &:hover{
+            .app-l-meet__avatar{
+                background: $primary-color;
+            }
+            .app-l-meet__connect{
+                a{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.app-l-meet__fut{
+    background-color: $grey-shade-100;
+    min-height: 554px;
+    background-position: center;
+    position: relative;
+    margin: 100px 0;
+    padding: 20px;
+
+    @include border-radius(20px);
+    @include backgroundSize(cover);
+    @include flexboxv2();
+    @include flex-directionv2(column);
+
+    &:before{
+        content: '';
+        width: 708px;
+        height: 301px;
+        max-width: 100%;
+        max-height: 100%;
+        background: #01070F;
+        opacity: 0.6;
+        filter: blur(94px);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        pointer-events: none;
+    }
+
+    .app-l-meet__fet-cnt{
+        height: 100%;
+        max-width: 776px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+
+        @include flexboxv2();
+        @include flex-directionv2(column);
+        @include justify-contentv2(center);
+        @include align-itemsv2(center);
+        @include flex-growv2(1);
+        
+        h3{
+            text-align: center;
+            font-size: 64px;
+            line-height: 1;
+            margin: 0px;
+
+            @include media-991{
+                font-size: 55px;
+            }
+            @include media-767{
+                font-size: 34px;
+            }
+        }
+        .app-c-btn{
+            margin-top: 40px;
+        }
+    }
+}

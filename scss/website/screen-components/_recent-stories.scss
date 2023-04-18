@@ -1,0 +1,238 @@
+.app-l-recent-stories{
+    padding: 120px 0;
+
+    @include media-767{
+        padding: 60px 0;
+    }
+    .h1{
+        color: $white;
+    }
+}
+.app-l-recent__slider-wrap{
+    position: relative;
+    margin: 0 -18px;
+    z-index: 1;
+
+    @include media-767{
+        margin: 0;
+    }
+    
+    .app-l-r__link{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .app-l-slider__item{
+        padding: 18px;
+        position: relative;
+
+        @include border-radius(30px);
+        @include transition(background ease 0.2s);
+        
+        @include media-767{
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .app-l-recent__image{
+            height: 200px;
+            margin-bottom: 30px;
+            overflow: hidden;
+
+            @include border-radius(20px);
+
+            a{
+                @include flexboxv2();
+                @include align-itemsv2(center);
+                @include justify-contentv2(center);
+            }
+        }
+        .app-l-recent__content{
+            .app-l-r__tag{
+                margin-bottom: 5px;
+
+                @include flexboxv2();
+                @include flex-wrapv2(wrap);
+
+                span{
+                    color: $grey-shade-60;
+                    font-size: 18px;
+                    line-height: 1;
+                    margin: 0 10px 5px 0;
+
+                    @include transition(color ease 0.2s);
+                }
+            }
+            h6{
+                color: $white;
+                margin-bottom: 10px;
+
+                @include transition(color ease 0.2s);
+
+                a{
+                    color: $white;
+                }
+            }
+            p{
+                margin: 0;
+                font-size: 14px;
+                color: $grey-shade-40;
+                line-height: 1.4;
+
+                @include transition(color ease 0.2s);
+
+                + p{
+                    margin-top: 15px;
+                }
+            }
+            .app-l-r__user{
+                margin-top: 38px;
+
+                @include flexboxv2();
+                @include align-itemsv2(center);
+
+                .app-l-r__avatar{
+                    width: 51px;
+                    height: 51px;
+                    margin-right: 18px;
+                    overflow: hidden;
+
+                    @include flex-shrinkv2(0);
+                    @include border-radius(14px);
+                }
+                .app-l-r__user-data{
+                    .app-l-r__user-name{
+                        display: block;
+                        color: $white;
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: normal;
+                        margin-bottom: 4px;
+
+                        @include transition(color ease 0.2s);
+                    }
+                    .app-l-r__date{
+                        color: $grey-shade-40;
+                        font-size: 12px;
+                        display: block;
+                        line-height: normal;
+
+                        @include transition(color ease 0.2s);
+                    }
+                }
+            }
+        }
+
+        &:hover{
+            background: $white;
+
+            .app-l-recent__content{
+                .app-l-r__tag{
+                    span{
+                        color: $grey-shade-40;
+                    }
+                }
+                h6{
+                    a{
+                        color: $grey-shade-100;
+                    }
+                }
+                p{
+                    color: $grey-shade-60;
+                }
+                .app-l-r__user-data{
+                    .app-l-r__user-name{
+                        color: $grey-shade-100;
+                    }
+                    .app-l-r__date{
+                        color: $grey-shade-60;
+                    }
+                }
+            }
+        }
+    }
+
+    .app-l-r__controls{
+        position: absolute;
+        top: -70px;
+        right: 18px;
+
+        @include flexboxv2();
+        @include align-itemsv2(center);
+
+        @include media-767{
+            display: none !important;
+        }
+
+        button{
+            + button{
+                margin-left: 16px;
+            }
+        }
+        .app-l-r__left, .app-l-r__right{
+            background: none;
+            padding: 5px;
+            border: none;
+            outline: none;
+            color: $grey-shade-40;
+            width: 32px;
+            height: 32px;
+            border: 1px solid $grey-tint-40;
+
+            @include flexboxv2();
+            @include align-itemsv2(center);
+            @include justify-contentv2(center);
+            @include transition(color ease 0.2s, border ease 0.2s);
+            @include border-radius(50%);
+
+            i{
+                display: block;
+            }
+            &:hover{
+                border-color: $white;
+                color: $white;
+            }
+        }
+    }
+    .lSSlideOuter {
+        .lSPager {
+            display: none;
+
+            @include media-767{
+                display: block;
+            }
+            li{
+                a{
+                    width: 6px;
+                    height: 6px;
+                    background: $grey-shade-60;
+
+                    @include transition(background ease 0.2s, width ease 0.2s, border-radius ease 0.2s);
+                    @include border-radius(50%);
+                }
+                &.active{
+                    a{
+                        width: 16px;
+                        background: $primary-color;
+
+                        @include border-radius(30px);
+                    }
+                }
+            }
+        }
+    }
+
+    .app-l-cat__block{
+        @include media-767{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.app-l-recent__more{
+    margin-top: 76px;
+}

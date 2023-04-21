@@ -75,6 +75,14 @@
 		)
 	);
 
+		register_sidebar(array(
+			'name' => 'PartneringQuery',
+			'id' => 'PartneringQuery',
+			'before_widget' => '<div class = "ch-l-sidebar--widject">',
+			'after_widget' => '</div>'
+		)
+	);
+
 	// Our custom post type function
 	function create_posttype() {
 

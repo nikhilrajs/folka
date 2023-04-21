@@ -2,13 +2,13 @@
     background: $app-bg-secondary;
     padding: clamp(3rem, 5%, 6.75rem) 0 34px;
 
-    @include media-767{
-        padding-top: 69px;
-    }
+    // @include media-767{
+    //     padding-top: 69px;
+    // }
 }
 
 .app-l-ft__title {
-	font-size: clamp(1.5rem, 0.773rem + 3.64vw, 3.5rem);
+	font-size: clamp(1.25rem, 0.614rem + 3.18vw, 3rem);
 	color: #fff;
 }
 
@@ -16,7 +16,7 @@
     padding-bottom: 85px;
 
     @include flexboxv2();
-    @include align-itemsv2(flex-end);
+    // @include align-itemsv2(flex-end);
 
     @include media-991{
         display: block;
@@ -26,17 +26,19 @@
     .app-l-ft__left{
         // max-width: 700px;
         // width: 100%;
-				width: min(900px, 100%);
+				width: min(850px, 100%);
+				@include flexboxv2();
+				@include flex-directionv2(column);
+				@include justify-contentv2(space-between);
+				gap: 1.25rem;
 
         @include media-991{
-            margin-bottom: 65px;
+					margin-bottom: 41px;
+					@include align-itemsv2(center);
 
-            @include flexboxv2();
-            @include flex-directionv2(column);
-            @include align-itemsv2(center);
         }
         .app-l-ft__logo{
-            margin-bottom: 55px;
+            // margin-bottom: 55px;
 
             a{
                 display: block;
@@ -108,6 +110,8 @@
             @include align-itemsv2(center);
             @include justify-contentv2(flex-end);
 
+						margin-top: 41px;
+
             @include media-991{
                 @include justify-contentv2(center);
             }
@@ -132,7 +136,7 @@
             @include align-itemsv2(center);
             @include justify-contentv2(flex-end);
 
-            @include media-1200{
+            @include media-991{
                 display: block;
             }
             @include media-991{
@@ -167,7 +171,7 @@
                     padding-left: 20px;
                     margin-left: 20px;
 
-                    @include media-1200{
+                    @include media-991{
                         margin-left: 0;
                         padding-left: 0;
                         margin-top: 7px;
@@ -187,7 +191,7 @@
                         @include transformOrigin(center);
                         @include transform(rotate(11deg));
 
-                        @include media-1200{
+                        @include media-991{
                             display: none;
                         }
                     }
@@ -261,4 +265,30 @@
             }
         }
     }
+}
+
+.app-l-ft__nav ul.menu {
+
+	> * + * {
+		margin-top: 1rem;
+	}
+
+	li.menu-item.menu-item-type-custom {
+		text-align: center;
+
+		@include media-breakpoint-up(lg) {
+			text-align: right;
+		}
+
+		a {
+			color: #fff;
+		}
+	}
+
+}
+
+.app-l-ft__logo {
+	@include media-breakpoint-down(md) {
+		margin-block: 2rem;
+	}
 }

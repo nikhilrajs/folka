@@ -33,7 +33,7 @@
   <p>Please enter the below details and we will get back to you
                                     </p>
 </div>
-  <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("BookNow") ) : ?>
+  <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("PartneringQuery") ) : ?>
 
     <?php endif;?>
 </div>

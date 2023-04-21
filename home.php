@@ -223,9 +223,10 @@
 
 
 <div id="home_community_info_dialog" class="app-l-booknow">
-	<div class="app-l-bookn__header">
+	<!-- <div class="app-l-bookn__header">
+		</div> -->
 		<?php if(get_field('home-join-community-title')) { ?>
-			<h4 class="mb-md-5">
+			<h4 class="mb-3 mb-md-5">
 				<?php echo get_field('home-join-community-title')?>
 			</h4>
 		<?php } ?>
@@ -234,11 +235,10 @@
 				<?php echo get_field('home-join-community-description')?>
 			<?php } ?>
 		</div>
-		<div class="d-flex justify-content-end">
-			<button class="app-c-btn app-c-btn--grey">Cancel</button>
-			<button class="app-c-btn app-c-btn--primary">Join community</button>
+		<div class="d-flex justify-content-end" style="gap: 1rem">
+			<button type="button" class="app-c-btn app-c-btn--grey">Cancel</button>
+			<button type="button" class="app-c-btn app-c-btn--primary">Join community</button>
 		</div>
-	</div>
 </div>
 
 <?php get_template_part( 'recent-stories', get_post_format() ); ?>

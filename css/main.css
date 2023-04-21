@@ -15009,12 +15009,17 @@ body {
 
 .app-l-footer {
   background: #000000;
-  padding: 108px 0 34px;
+  padding: clamp(3rem, 5%, 6.75rem) 0 34px;
 }
 @media screen and (max-width: 767px) {
   .app-l-footer {
     padding-top: 69px;
   }
+}
+
+.app-l-ft__title {
+  font-size: clamp(1.5rem, 0.773rem + 3.64vw, 3.5rem);
+  color: #fff;
 }
 
 .app-l-footer__top {
@@ -15031,8 +15036,7 @@ body {
   }
 }
 .app-l-footer__top .app-l-ft__left {
-  max-width: 700px;
-  width: 100%;
+  width: min(900px, 100%);
 }
 @media screen and (max-width: 991px) {
   .app-l-footer__top .app-l-ft__left {
@@ -15695,14 +15699,14 @@ body {
 }
 
 .app-l-how-we-are {
-  padding: 150px 0;
+  padding: clamp(3rem, 5%, 9.5rem) 15px;
   color: #212529;
 }
 .app-l-how-we-are .app-l-how-we-are__container {
   background-color: #FFCE6E;
   border-radius: 30px;
-  padding-inline: 58px;
-  padding-block: 54px;
+  padding-inline: clamp(1.25rem, 5%, 3.625rem);
+  padding-block: clamp(1rem, 5%, 3rem);
 }
 
 .app-l-hw__row {
@@ -15711,10 +15715,10 @@ body {
   flex-wrap: wrap;
   -moz-justify-content: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 .app-l-hw__row .app-l-hw__block {
-  width: 32.33333%;
+  width: 31.33333%;
   margin: 30px 0;
   min-height: 179px;
   display: -moz-flex;
@@ -15724,16 +15728,15 @@ body {
   -moz-align-items: center;
   align-items: center;
 }
-@media screen and (max-width: 991px) {
-  .app-l-hw__row .app-l-hw__block {
-    width: 50%;
-  }
-}
 @media screen and (max-width: 767px) {
   .app-l-hw__row .app-l-hw__block {
+    width: 50%;
     min-height: 160px;
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  .app-l-hw__row .app-l-hw__block:last-child {
+    margin-bottom: 0;
   }
 }
 @media screen and (max-width: 400px) {
@@ -15755,7 +15758,7 @@ body {
 }
 .app-l-hw__row .app-l-hw__block .app-l-hw__text .app-l-hw__label {
   display: block;
-  font-size: 18px;
+  font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
   line-height: normal;
   text-align: center;
 }
@@ -15775,7 +15778,7 @@ body {
 .app-l-hw__divider {
   width: 100%;
   height: 1px;
-  margin-block: 50px;
+  margin-block: clamp(1.5rem, 5%, 3.125rem);
   border-top: dotted 1px hsla(0, 0%, 0%, 0.2);
 }
 
@@ -18251,13 +18254,13 @@ body {
 
 .app-l-our-partners__wrapper {
   background-color: #F1F3F5;
-  padding-block: 115px;
+  padding-block: clamp(3.5rem, 5%, 7rem);
 }
 
 .app-l-our-partners__title {
   -webkit-margin-after: 42px;
           margin-block-end: 42px;
-  font-size: 38px;
+  font-size: clamp(1.5rem, 1.182rem + 1.59vw, 2.375rem);
   color: #212529;
   text-align: center;
 }
@@ -18287,12 +18290,12 @@ body {
 }
 
 .app-l-partners-with-us__wrapper {
-  padding-block: 95px;
+  padding-block: clamp(4rem, 5%, 6rem);
+  padding-inline: 15px;
 }
 
 .app-l-partners-with-us__container {
-  padding-inline: 54px;
-  padding-block: 34px;
+  padding-inline: clamp(1.25rem, 5%, 3.5rem);
   background-color: #FF4F0A;
   color: #fff;
   border-radius: 30px;

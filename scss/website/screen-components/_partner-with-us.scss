@@ -1,10 +1,11 @@
 .app-l-partners-with-us__wrapper {
-	padding-block: 95px;
+	padding-block: clamp(4rem, 5%, 6rem);
+	padding-inline: 15px;
 }
 
 .app-l-partners-with-us__container {
-	padding-inline: 54px;
-	padding-block: 34px;
+	padding-inline: clamp(1.25rem, 5%, 3.5rem);
+	// padding-block: 34px;
 	background-color: #FF4F0A;
 	color: #fff;
 	border-radius: 30px;

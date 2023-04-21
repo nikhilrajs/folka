@@ -102,7 +102,7 @@
 </section> -->
 <section class="app-l-how-we-are app-l-bg--dark">
     <div class="container app-l-how-we-are__container">
-        <h3 class="fs-4 lh-base mb-4">Sustainability is not a fancy words for us. This is how we rethinking tourism</h3>
+        <h3 class="fs-4 lh-base mb-4 text-center text-lg-start">Sustainability is not a fancy words for us. This is how we rethinking tourism</h3>
         <div class="app-l-hw__row">
             <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
@@ -129,13 +129,15 @@
 				<section class="row">
 					<div class="col-lg-8">
 					<?php if(get_field('home_community_info_title')) { ?>
-						<h2 class="fw-light fs-4 lh-base text-center text-md-start"><?php echo get_field('home_community_info_title') ?></h2>
+						<h2 class="fw-light fs-4 lh-base text-center text-lg-start"><?php echo get_field('home_community_info_title') ?></h2>
 					<?php } ?>
-					<?php if(get_field('home_community_info_description')) { ?>
-						<?php echo get_field('home_community_info_description') ?>
-					<?php } ?>
+					<div class="fw-light text-center text-lg-start">
+						<?php if(get_field('home_community_info_description')) { ?>
+							<?php echo get_field('home_community_info_description') ?>
+						<?php } ?>
+					</div>
 				</div>
-						<div class="col-lg-4 d-flex align-items-sm-end justify-content-center justify-content-md-start justify-content-lg-end mb-3">
+						<div class="col-lg-4 d-flex align-items-sm-end justify-content-center justify-content-lg-start justify-content-lg-end mb-3">
 							<a href="javascript:void(0);" class="app-c-btn app-c-btn--teritary" data-fancybox="dialog"  data-src="#home_community_info_dialog">
 									<span>Join Folka Community</span>
 							</a>
@@ -146,48 +148,96 @@
 
 <section class="app-l-projects app-l-bg--dark">
     <div class="container">
-        <div class="app-l-prj__slider-wrap">
-            <div class="app-l-project__slider">
-                <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                $args = array(
-                    'post_type' => 'projects',
-                    'posts_per_page' => -1,
-                    'paged' => $paged,
-                    'order'	=> 'ASC'
-                );
-                $wp_query = new WP_Query($args);
-                while ( have_posts() ) : the_post(); ?>
-                    <div class="app-l-project__item">
-                        <div class="app-l-project__image">
-                            <img src="<?php echo the_field('projects_slider_image') ?>" alt="">
-                        </div>
-                        <div class="app-l-project__content">
-                            <div class="app-l-project__tag">
-                                <span>#</span>Projects
-                            </div>
-                            <div class="app-l-project__c-wrap">
-                                <h2><?php echo the_title(); ?></h2>
-                                <p>
-                                    <?php echo the_content() ?>
-                                </p>
-                                <?php if(!get_field('hide_button')) { ?>
-                                    <a href="<?php the_permalink(); ?>" class="app-c-btn app-c-btn--teritary">Read full case study</a>
-                                <?php } ?>
-                            </div>
-                        </div>
-                    </div>
-                <?php endwhile; wp_reset_query(); ?>
-            </div>
-        </div>
+
+			<div>
+				<div class="">
+							<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+							$args = array(
+									'post_type' => 'projects',
+									'posts_per_page' => 1,
+									'paged' => $paged,
+									'order'	=> 'ASC'
+							);
+							$wp_query = new WP_Query($args);
+							while ( have_posts() ) : the_post(); ?>
+									<div class="app-l-project__item">
+											<div class="app-l-project__image">
+													<img src="<?php echo the_field('projects_slider_image') ?>" alt="">
+											</div>
+											<div class="app-l-project__content">
+													<div class="app-l-project__tag">
+															<span>#</span>Projects
+													</div>
+													<div class="app-l-project__c-wrap">
+															<h2><?php echo the_title(); ?></h2>
+															<p>
+																	<?php echo the_content() ?>
+															</p>
+															<?php if(!get_field('hide_button')) { ?>
+																	<a href="<?php the_permalink(); ?>" class="app-c-btn app-c-btn--teritary">Read full case study</a>
+															<?php } ?>
+													</div>
+											</div>
+									</div>
+							<?php endwhile; wp_reset_query(); ?>
+					</div>
+			</div>
+
+			<!-- Old Project Section with Slider - Start -->
+				<!-- <div class="app-l-prj__slider-wrap">
+					<div class="app-l-project__slider">
+							<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+							$args = array(
+									'post_type' => 'projects',
+									'posts_per_page' => -1,
+									'paged' => $paged,
+									'order'	=> 'ASC'
+							);
+							$wp_query = new WP_Query($args);
+							while ( have_posts() ) : the_post(); ?>
+									<div class="app-l-project__item">
+											<div class="app-l-project__image">
+													<img src="<?php echo the_field('projects_slider_image') ?>" alt="">
+											</div>
+											<div class="app-l-project__content">
+													<div class="app-l-project__tag">
+															<span>#</span>Projects
+													</div>
+													<div class="app-l-project__c-wrap">
+															<h2><?php echo the_title(); ?></h2>
+															<p>
+																	<?php echo the_content() ?>
+															</p>
+															<?php if(!get_field('hide_button')) { ?>
+																	<a href="<?php the_permalink(); ?>" class="app-c-btn app-c-btn--teritary">Read full case study</a>
+															<?php } ?>
+													</div>
+											</div>
+									</div>
+							<?php endwhile; wp_reset_query(); ?>
+					</div>
+				</div> -->
+			<!-- Old Project Section with Slider - End -->
     </div>
 </section>
 
 
 <div id="home_community_info_dialog" class="app-l-booknow">
 	<div class="app-l-bookn__header">
-		<h4>book now!</h4>
-		<p>Please enter the below details and we will get back to you
-																			</p>
+		<?php if(get_field('home-join-community-title')) { ?>
+			<h4 class="mb-md-5">
+				<?php echo get_field('home-join-community-title')?>
+			</h4>
+		<?php } ?>
+		<div class="mb-md-5">
+			<?php if(get_field('home-join-community-description')) { ?>
+				<?php echo get_field('home-join-community-description')?>
+			<?php } ?>
+		</div>
+		<div class="d-flex justify-content-end">
+			<button class="app-c-btn app-c-btn--grey">Cancel</button>
+			<button class="app-c-btn app-c-btn--primary">Join community</button>
+		</div>
 	</div>
 </div>
 

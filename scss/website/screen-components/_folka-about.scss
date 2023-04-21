@@ -110,7 +110,7 @@
 }
 
 .app-l-how-we-are{
-    padding: 150px 0;
+    padding: clamp(3rem, 5%, 9.5rem) 15px;
 		color: #212529;
 
     // .h1{
@@ -125,8 +125,8 @@
 		.app-l-how-we-are__container {
 			background-color: #FFCE6E;
 			border-radius: 30px;
-			padding-inline: 58px;
-			padding-block: 54px;
+			padding-inline: clamp(1.25rem, 5%, 3.625rem);
+			padding-block: clamp(1rem, 5%, 3rem);
 		}
 }
 
@@ -134,10 +134,10 @@
     @include flexboxv2();
     @include flex-wrapv2(wrap);
 		@include justify-contentv2(center);
-		gap: 1rem;
+		gap: 0.75rem;
 
     .app-l-hw__block{
-        width: 32.33333%;
+        width: 31.33333%;
         margin: 30px 0;
         min-height: 179px;
         // border-bottom: $grey-shade-100 1px solid;
@@ -146,13 +146,18 @@
         @include flex-directionv2(column);
         @include align-itemsv2(center);
 
-        @include media-991{
-            width: 50%;
-        }
+        // @include media-991{
+        //     width: 50%;
+        // }
         @include media-767{
+					width: 50%;
             min-height: 160px;
             margin-top:30px;
             margin-bottom: 30px;
+
+						&:last-child {
+							margin-bottom: 0;
+						}
         }
         @include media-400{
             width: 100%;
@@ -180,7 +185,7 @@
             .app-l-hw__label{
                 display: block;
                 // font-family: $font-secondary;
-                font-size: 18px;
+                font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
                 line-height: normal;
                 text-align: center;
 
@@ -200,6 +205,6 @@
 .app-l-hw__divider {
 	width: 100%;
 	height: 1px;
-	margin-block: 50px;
+	margin-block: clamp(1.5rem, 5%, 3.125rem);
 	border-top: dotted 1px hsl(0 0% 0% / 20%);
 }

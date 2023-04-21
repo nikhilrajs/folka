@@ -3,52 +3,56 @@
             <div class="container">
                 <div class="app-l-footer__top">
                     <div class="app-l-ft__left">
+												<h3 class="app-l-ft__title text-center text-lg-start">
+													Be a part of tomorrow’s sustainable world by booking your trip with us!
+												</h3>
                         <div class="app-l-ft__logo">
                             <a href="<?php echo home_url();?>">
                                 <img src="<?php echo get_bloginfo('template_directory'); ?>/img/logo-revert.svg" class="img-fluid" alt="">
                             </a>
                         </div>
-                        <div class="app-l-ft__nav">
-                            <?php wp_nav_menu(
-                                array(
-                                    'menu' => 'Main Menu'
-                                ) 
-                            ); ?>
-                        </div>
+
                     </div>
                     <div class="app-l-ft__right">
+											<div class="app-l-ft__nav">
+													<?php wp_nav_menu(
+															array(
+																	'menu' => 'Footer Nav'
+															)
+													); ?>
+											</div>
                         <div class="app-l-ft__connect">
                             <?php if( myprefix_get_theme_option('input_twitter') ): ?>
-                                <?php 
+                                <?php
                                     $value = myprefix_get_theme_option( 'input_twitter' );
                                 ?>
                                 <a target="_blank" href="<?php echo $value; ?>"><i class="folka-twitter"></i></a>
-                            <?php endif; ?> 
-                            
+                            <?php endif; ?>
+
                             <?php if( myprefix_get_theme_option('input_fb') ): ?>
-                                <?php 
+                                <?php
                                     $value = myprefix_get_theme_option( 'input_fb' );
                                 ?>
                                 <a target="_blank" href="<?php echo $value; ?>"><i class="folka-facebook"></i></a>
                             <?php endif; ?>
 
                             <?php if( myprefix_get_theme_option('input_insta') ): ?>
-                                <?php 
+                                <?php
                                     $value = myprefix_get_theme_option( 'input_insta' );
                                 ?>
                                 <a target="_blank" href="<?php echo $value; ?>"><i class="folka-insta"></i></a>
                             <?php endif; ?>
 
                             <?php if( myprefix_get_theme_option('input_linkedIn') ): ?>
-                                <?php 
+                                <?php
                                     $value = myprefix_get_theme_option( 'input_linkedIn' );
                                 ?>
                                 <a target="_blank" href="<?php echo $value; ?>"><i class="folka-linkedin"></i></a>
                             <?php endif; ?>
                         </div>
                         <div class="app-l-f__info">
-                            <?php if( myprefix_get_theme_option('input_phone') ): ?>  
-                                <?php 
+                            <?php if( myprefix_get_theme_option('input_phone') ): ?>
+                                <?php
                                     $value = myprefix_get_theme_option( 'input_phone' );
                                 ?>
                                 <div class="app-l-f__phone">
@@ -57,10 +61,10 @@
                                         <span><?php echo $value; ?></span>
                                     </a>
                                 </div>
-                            <?php endif; ?>  
+                            <?php endif; ?>
 
-                            <?php if( myprefix_get_theme_option('input_email') ): ?>  
-                                <?php 
+                            <?php if( myprefix_get_theme_option('input_email') ): ?>
+                                <?php
                                     $value = myprefix_get_theme_option( 'input_email' );
                                 ?>
                                 <div class="app-l-f__mail">
@@ -81,7 +85,7 @@
                         <?php wp_nav_menu(
                             array(
                                 'menu' => 'Footer Privacy'
-                            ) 
+                            )
                         ); ?>
                     </div>
                 </div>
@@ -93,35 +97,35 @@
                 <i class="folka-close"></i>
             </button>
             <?php if( myprefix_get_theme_option('select_logo') ): ?>
-                <?php 
+                <?php
                     $value = myprefix_get_theme_option( 'select_logo' );
                 ?>
                 <div class="app-l-menu__logo">
                     <img src="<?php echo $value; ?>" class="img-fluid" alt= "<?php bloginfo('name'); ?>">
                 </div>
-            <?php endif; ?>  
-            
+            <?php endif; ?>
+
             <div class="app-l-menu__explr">
                 <span>explore folka</span>
             </div>
-            <div class="app-l-menu__main">
+            <!-- <div class="app-l-menu__main">
                 <?php wp_nav_menu(
                     array(
                         'menu' => 'Main Menu'
-                    ) 
+                    )
                 ); ?>
-            </div>
+            </div> -->
             <div class="app-l-menu__sub">
                 <?php wp_nav_menu(
                     array(
                         'menu' => 'Header Sub Menu'
-                    ) 
+                    )
                 ); ?>
             </div>
             <div class="app-l-m__info">
 
-                <?php if( myprefix_get_theme_option('input_phone') ): ?>  
-                    <?php 
+                <?php if( myprefix_get_theme_option('input_phone') ): ?>
+                    <?php
                         $value = myprefix_get_theme_option( 'input_phone' );
                     ?>
                     <div class="app-l-m__phone">
@@ -130,10 +134,10 @@
                             <span><?php echo $value; ?></span>
                         </a>
                     </div>
-                <?php endif; ?>  
+                <?php endif; ?>
 
-                <?php if( myprefix_get_theme_option('input_email') ): ?>  
-                    <?php 
+                <?php if( myprefix_get_theme_option('input_email') ): ?>
+                    <?php
                         $value = myprefix_get_theme_option( 'input_email' );
                     ?>
                     <div class="app-l-m__mail">
@@ -143,39 +147,39 @@
                         </a>
                     </div>
                 <?php endif; ?>
-                
+
             </div>
             <div class="app-l-m__connect">
                 <?php if( myprefix_get_theme_option('input_twitter') ): ?>
-                    <?php 
+                    <?php
                         $value = myprefix_get_theme_option( 'input_twitter' );
                     ?>
                     <a target="_blank" href="<?php echo $value; ?>"><i class="folka-twitter"></i></a>
-                <?php endif; ?> 
-                
+                <?php endif; ?>
+
                 <?php if( myprefix_get_theme_option('input_fb') ): ?>
-                    <?php 
+                    <?php
                         $value = myprefix_get_theme_option( 'input_fb' );
                     ?>
                     <a target="_blank" href="<?php echo $value; ?>"><i class="folka-facebook"></i></a>
                 <?php endif; ?>
 
                 <?php if( myprefix_get_theme_option('input_insta') ): ?>
-                    <?php 
+                    <?php
                         $value = myprefix_get_theme_option( 'input_insta' );
                     ?>
                     <a target="_blank" href="<?php echo $value; ?>"><i class="folka-insta"></i></a>
                 <?php endif; ?>
 
                 <?php if( myprefix_get_theme_option('input_linkedIn') ): ?>
-                    <?php 
+                    <?php
                         $value = myprefix_get_theme_option( 'input_linkedIn' );
                     ?>
                     <a target="_blank" href="<?php echo $value; ?>"><i class="folka-linkedin"></i></a>
                 <?php endif; ?>
             </div>
         </div>
-        <?php wp_footer(); ?> 
+        <?php wp_footer(); ?>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/vendor/jquery-3.6.0.min.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/vendor/popper.min.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/vendor/bootstrap.min.js"></script>
@@ -187,7 +191,7 @@
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/vendor/select2.min.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/vendor/datedropper-jquery.js"></script>
         <script src="<?php echo get_bloginfo('template_directory'); ?>/js/main.js"></script>
-        
+
         <script type="text/javascript">
             [].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
                 img.setAttribute('src', img.getAttribute('data-src'));
@@ -196,8 +200,8 @@
                 };
             });
 
-            
+
         </script>
-        
+
     </body>
 </html>

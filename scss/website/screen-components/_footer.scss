@@ -1,10 +1,15 @@
 .app-l-footer{
     background: $app-bg-secondary;
-    padding: 108px 0 34px;
+    padding: clamp(3rem, 5%, 6.75rem) 0 34px;
 
     @include media-767{
         padding-top: 69px;
     }
+}
+
+.app-l-ft__title {
+	font-size: clamp(1.5rem, 0.773rem + 3.64vw, 3.5rem);
+	color: #fff;
 }
 
 .app-l-footer__top{
@@ -19,8 +24,9 @@
     }
 
     .app-l-ft__left{
-        max-width: 700px;
-        width: 100%;
+        // max-width: 700px;
+        // width: 100%;
+				width: min(900px, 100%);
 
         @include media-991{
             margin-bottom: 65px;
@@ -59,7 +65,7 @@
                     margin-right: 34px;
                     padding-right: 34px;
                     border-right: 1px dashed $grey-shade-40;
-                    
+
                     @include media-991{
                         margin-top: 15px;
                         margin-bottom: 15px;

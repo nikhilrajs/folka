@@ -246,3 +246,52 @@
     0%   { stroke-dasharray: 1000; }
     100% { stroke-dasharray: 1088; }
 }
+
+.app-l-project__content--v2 {
+	background-color: #212529;
+	border-radius: 30px;
+	padding: clamp(1.25rem, 5%, 3.5rem);
+
+	&__title {
+		font-size: clamp(1.125rem, 0.716rem + 2.05vw, 2.25rem);
+		color: #fff;
+	}
+
+	&__content {
+		color: #CED4DA;
+		font-size: clamp(1rem, 0.773rem + 1.14vw, 1.625rem);
+		line-height: 24px;
+		font-weight: 300;
+		margin-block-start: clamp(1rem, 5%, 3.5rem);
+		@include media-breakpoint-up(md) {
+				line-height: 1.25;
+			}
+	}
+
+	&__sub-content {
+		color: #868E96;
+		font-size: 14px;
+	}
+}
+
+.app-l-project__item--v2 {
+	display: flex;
+	gap: clamp(1.125rem, 0.716rem + 2.05vw, 2.25rem);
+
+	.app-l-project__image {
+		flex-grow: 1;
+		flex-basis: 50%;
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
+
+	.app-l-project__content--v2 {
+		flex-grow: 1;
+		flex-basis: 50%;
+	}
+}
+
+.app-l-projects--v2 {
+	padding-block-start: clamp(2rem, 2%, 3rem);
+}

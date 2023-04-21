@@ -146,7 +146,7 @@
     </div>
 </section>
 
-<section class="app-l-projects app-l-bg--dark">
+<section class="app-l-projects--v2 app-l-bg--dark">
     <div class="container">
 
 			<div>
@@ -160,23 +160,22 @@
 							);
 							$wp_query = new WP_Query($args);
 							while ( have_posts() ) : the_post(); ?>
-									<div class="app-l-project__item">
+									<div class="app-l-project__item--v2">
 											<div class="app-l-project__image">
-													<img src="<?php echo the_field('projects_slider_image') ?>" alt="">
+													<img class="img-fluid" src="<?php echo the_field('projects_slider_image') ?>" alt="">
 											</div>
-											<div class="app-l-project__content">
-													<div class="app-l-project__tag">
-															<span>#</span>Projects
-													</div>
-													<div class="app-l-project__c-wrap">
-															<h2><?php echo the_title(); ?></h2>
-															<p>
-																	<?php echo the_content() ?>
-															</p>
-															<?php if(!get_field('hide_button')) { ?>
-																	<a href="<?php the_permalink(); ?>" class="app-c-btn app-c-btn--teritary">Read full case study</a>
+											<div class="app-l-project__content--v2 d-flex flex-column">
+															<h2 class="app-l-project__content--v2__title"><?php echo the_title(); ?></h2>
+
+															<?php if(get_field('home_projects_sub_content')) { ?>
+																<div class="app-l-project__content--v2__sub-content"><?php echo get_field('home_projects_sub_content')?></div>
 															<?php } ?>
-													</div>
+
+															<div class="app-l-project__content--v2__content"><?php echo the_content() ?></div>
+
+															<?php if(!get_field('hide_button')) { ?>
+																	<a href="<?php the_permalink(); ?>" class="app-c-btn app-c-btn--primary align-self-md-start" style="margin-block-start: auto">View full details</a>
+															<?php } ?>
 											</div>
 									</div>
 							<?php endwhile; wp_reset_query(); ?>

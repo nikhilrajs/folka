@@ -102,7 +102,10 @@
 </section> -->
 <section class="app-l-how-we-are app-l-bg--dark">
     <div class="container app-l-how-we-are__container">
-        <h3 class="fs-4 lh-base mb-4 text-center text-lg-start">Sustainability is not a fancy words for us. This is how we rethinking tourism</h3>
+				<?php if(get_field('home_community_info_title')) { ?>
+					<h3 class="fs-4 lh-base mb-4 text-center text-lg-start"><?php echo get_field('home_community_info_title') ?></h3>
+				<?php } ?>
+
         <div class="app-l-hw__row">
             <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
@@ -128,12 +131,12 @@
 				<div class="app-l-hw__divider"></div>
 				<section class="row">
 					<div class="col-lg-8">
-					<?php if(get_field('home_community_info_title')) { ?>
-						<h2 class="fw-light fs-4 lh-base text-center text-lg-start"><?php echo get_field('home_community_info_title') ?></h2>
+					<?php if(get_field('home_community_info_description')) { ?>
+						<h2 class="fw-light fs-4 lh-base text-center text-lg-start"><?php echo get_field('home_community_info_description') ?></h2>
 					<?php } ?>
 					<div class="fw-light text-center text-lg-start">
-						<?php if(get_field('home_community_info_description')) { ?>
-							<?php echo get_field('home_community_info_description') ?>
+						<?php if(get_field('home_community_info_sub_description')) { ?>
+							<?php echo get_field('home_community_info_sub_description') ?>
 						<?php } ?>
 					</div>
 				</div>

@@ -80,14 +80,14 @@
                         <?php endwhile; ?>
                     <?php endif; wp_reset_postdata(); ?>
                 </div>
-                <div class="app-l-r__controls">
+                <!-- <div class="app-l-r__controls">
                     <button class="app-l-r__left">
                         <i class="folka-arrow-left"></i>
                     </button>
                     <button class="app-l-r__right">
                         <i class="folka-arrow-right"></i>
                     </button>
-                </div>
+                </div> -->
             </div>
             <?php if ( !is_page_template( 'project-single-page.php' )) : ?>
                 <?php

@@ -408,8 +408,9 @@ $(document).ready(function() {
 		startFromMonday: false
 	});
 
-	$(".app-l-bn__rg .app-c-btn--grey").click(function(){
-		$(".app-l-booknow .carousel__button").trigger('click');
+	$(".app-l-bn__rg .app-c-btn--grey, #home_community_info_dialog .app-c-btn.app-c-btn--grey").click(function(){
+		$(this).parents('.app-l-booknow').find('.carousel__button').trigger('click');
+		// $(".app-l-booknow .carousel__button").trigger('click');
 	});
 
 	$(".app-l-booknow__body .form-group--float").each(function(){

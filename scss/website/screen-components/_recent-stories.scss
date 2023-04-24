@@ -16,7 +16,7 @@
     @include media-767{
         margin: 0;
     }
-    
+
     .app-l-r__link{
         position: absolute;
         top: 0;
@@ -30,7 +30,7 @@
 
         @include border-radius(30px);
         @include transition(background ease 0.2s);
-        
+
         @include media-767{
             max-width: 400px;
             margin-left: auto;
@@ -126,7 +126,7 @@
             }
         }
 
-        &:hover{
+        &:not(.js-slider-item--home-products):hover{
             background: $white;
 
             .app-l-recent__content{

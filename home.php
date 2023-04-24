@@ -236,7 +236,9 @@
 		</div>
 		<div class="d-flex justify-content-end" style="gap: 1rem">
 			<button type="button" class="app-c-btn app-c-btn--grey">Cancel</button>
-			<button type="button" class="app-c-btn app-c-btn--primary">Join community</button>
+			<a href="<?php echo the_field('home-join-community-action') ?>" target="_blank" class="app-c-btn app-c-btn--primary">
+					<?php echo the_field('home-join-community-action_label') ?>
+			</a>
 		</div>
 </div>
 

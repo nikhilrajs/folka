@@ -19,7 +19,7 @@
                         if ( $result-> have_posts() ) : ?>
                         <?php while ( $result->have_posts() ) : $result->the_post(); ?>
                             <div class="app-l-slider__block">
-                                <div class="app-l-slider__item">
+                                <div class="app-l-slider__item js-slider-item--home-products">
 																		<div class="p-0 app-l-cat__block post-<?php the_ID(); ?>">
 																				<div class="app-l-cat__hover">
 																						<div class="app-l-cat__feature-img">

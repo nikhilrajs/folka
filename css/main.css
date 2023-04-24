@@ -15297,15 +15297,15 @@ body {
 .app-l-ft__nav ul.menu > * + * {
   margin-top: 1rem;
 }
-.app-l-ft__nav ul.menu li.menu-item.menu-item-type-custom {
+.app-l-ft__nav ul.menu li.menu-item {
   text-align: center;
 }
 @media (min-width: 992px) {
-  .app-l-ft__nav ul.menu li.menu-item.menu-item-type-custom {
+  .app-l-ft__nav ul.menu li.menu-item {
     text-align: right;
   }
 }
-.app-l-ft__nav ul.menu li.menu-item.menu-item-type-custom a {
+.app-l-ft__nav ul.menu li.menu-item a {
   color: #fff;
 }
 
